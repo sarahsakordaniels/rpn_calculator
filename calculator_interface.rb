@@ -1,5 +1,5 @@
 
-class MainMenu
+class Calculator
 
   def self.greeting
     puts "Welcome to the Reverse Polish Notation (RPN) Calculator!"
@@ -12,19 +12,10 @@ class MainMenu
 
   def self.calculate
     stack = []
-    operands = []
-  loop do
-    @@input = gets.chomp
-    break if @@input == "q"
-    case
-      when /\d/
-        stack.push(@@input.to_f)
-      when "+", "-", "/", "*"
-        operands.push(@@input)
+      input = gets.chomp
+      stack << input unless input.class
+      #put this input into the stack if it is a numbers - if it is not, pop the last two off and utilize the operand given
     end
-  end
-  puts "Bye!"
-end
 
   def self.main_menu
     puts "\nPlease select from the following options:"
