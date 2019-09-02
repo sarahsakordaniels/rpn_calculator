@@ -13,14 +13,18 @@ class MainMenu
   def self.calculate
     stack = []
     operands = []
+  loop do
     @@input = gets.chomp
+    break if @@input == "q"
     case
       when /\d/
         stack.push(@@input.to_f)
-        puts stack
       when "+", "-", "/", "*"
+        operands.push(@@input)
     end
   end
+  puts "Bye!"
+end
 
   def self.main_menu
     puts "\nPlease select from the following options:"
