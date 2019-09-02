@@ -1,4 +1,3 @@
-
 class Calculator
 
   def self.greeting
@@ -11,11 +10,22 @@ class Calculator
   end
 
   def self.calculate
-    stack = []
-      input = gets.chomp
-      stack << input unless input.class
-      #put this input into the stack if it is a numbers - if it is not, pop the last two off and utilize the operand given
-    end
+    @stack = []
+
+    loop do
+    @input = gets.chomp
+    case @input
+    when "hi"
+        @stack << @input
+        #this input will not always be a number, how do i identify the input type?
+      when "q"
+        break
+      else
+        puts "Invalid input?"
+      end
+     puts @stack
+ end
+end
 
   def self.main_menu
     puts "\nPlease select from the following options:"
