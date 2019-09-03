@@ -10,7 +10,7 @@ Ex. The expression written '3 − 4 + 5' is written as '3 4 − 5 +'
 
 4 is first subtracted from 3, then 5 is added to it. 
 
-A breakdown of the algorithm
+*The following table is a visual breakdown of the algorithm:*
 
 ![alt text](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/algorithm.png)
 
