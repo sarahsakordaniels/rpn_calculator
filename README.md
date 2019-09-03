@@ -12,7 +12,10 @@ Ex. The expression written '3 − 4 + 5' is written as '3 4 − 5 +'
 
 *The following table is a visual breakdown of the algorithm:*
 
-![alt text](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/algorithm.png)
+![algorithm](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/algorithm.png)
+
+*The following illustration is a visual breakdown of RPN as polish sausage:*
+![sausage](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/sausage.png)
 
 ## Setup & Usage
 
