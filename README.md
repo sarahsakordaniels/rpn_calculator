@@ -11,12 +11,12 @@ Ex. The expression written '3 − 4 + 5' is written as '3 4 − 5 +'
 
 4 is first subtracted from 3, then 5 is added to it. 
 
-*The following table is a visual breakdown of the algorithm:*
+**The following table is a visual breakdown of the algorithm:**
 
 ![algorithm](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/algorithm.png)
 
 
-*The following illustration is a visual breakdown of RPN as polish sausage:*
+**The following illustration is a visual breakdown of RPN as polish sausage:**
 
 ![sausage](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/sausage.png)
 
