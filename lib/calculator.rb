@@ -12,20 +12,24 @@ class Calculator
     end
   end
 
+  def operand
+    if @stack.count >= 2
+      @stack.push(operate(@stack.pop, @stack.pop, @input))
+      puts @stack.last
+    else
+        puts "Insufficient operands. Please enter another operand before entering another operator (+, -, /, *)."
+    end
+  end
+
   def calculate
-    stack = []
+    @stack = []
     loop do
-      input = gets.chomp
-      case input
+      @input = gets.chomp
+      case @input
       when /\d/
-        stack << input.to_i
+        @stack << @input.to_i
       when /\*|\-|\+|\//
-        if stack.count >= 2
-          stack.push(operate(stack.pop, stack.pop, input))
-          puts stack.last
-        else
-            puts "Insufficient operands. Please enter another operand before entering another operator (+, -, /, *)."
-        end
+        operand
       when 'q'
         main_menu
       else
