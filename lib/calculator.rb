@@ -23,7 +23,7 @@ class Calculator
       case @input
         when /\d/
           @stack << @input.to_i
-        when '+', '-', '/', '*'
+        when /\*|\-|\+|\//
           @stack.push(operate(@stack.pop, @stack.pop, @input))
           puts @stack.last
         when 'q'
@@ -46,16 +46,18 @@ class Calculator
     if @response == "1"
       puts "\n\nPlease enter a number or operator symbol (+, -, /, *). Type 'q' to exit."
       calculate
+
     elsif @response == "2"
       puts "-------------How To Use This Calculator-------------"
       puts "This calculator evaluates math problems expressed in Reverse Polish Notation (RPN)."
-      puts "RPN is a method for representing expressions where the operator symbol is placed after the numbers being operated on."
-      puts "Example: '3+1' is expressed as '3 1 +'"
-      puts "When using this calculator, please enter a single operator or operand per line."
+      puts "RPN is a method for representing expressions where the operator symbol is placed after the numbers being operated on.\n\n"
+      puts "Example: '3+1' is expressed as '3 1 +'\n\n"
+      puts "When using this calculator, enter a single number or operator per line."
       puts "-----------------------------------------------------\n\n"
       main_menu
     elsif @response == "q"
       quit
+
     else
       puts "\n\nInvalid option. Please enter an option from the menu below.\n\n"
       main_menu
@@ -66,7 +68,4 @@ class Calculator
     puts "\n\nBye!"
     exit
   end
-
-  greeting
-  main_menu
 end
