@@ -1,5 +1,9 @@
 class Calculator
 
+  def initialize
+    @stack=[]
+  end
+
   def operate(a, b, operand)
     case operand
     when '+'
@@ -23,7 +27,6 @@ class Calculator
   end
 
   def calculate
-    @stack = []
     loop do
       input = gets.chomp
       case input
