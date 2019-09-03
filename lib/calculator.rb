@@ -19,6 +19,7 @@ def calculate
       when /\d/
         stack << input.to_i
       when /\*|\-|\+|\//
+<<<<<<< HEAD
           if stack.count >= 2
             stack.push(operate(stack.pop, stack.pop, input))
             puts stack.last
@@ -30,6 +31,14 @@ def calculate
         main_menu
       else
         puts "Invalid input. Please enter an opreand or operator."
+=======
+        stack.push(operate(stack.pop, stack.pop, input))
+        puts stack.last
+      when 'q'
+        main_menu
+      else
+        puts "Invalid input. Please enter a number or operator."
+>>>>>>> d562fe527f58830c1f9b2f096ca5a043d3cdb0fb
     end
   end
 end
@@ -44,7 +53,11 @@ def main_menu
   response = gets.chomp
 
   if response == "1"
+<<<<<<< HEAD
     puts "\n\nPlease enter an operand or operator (+, -, /, *). Type 'q' to exit."
+=======
+    puts "\n\nPlease enter a number or operator symbol (+, -, /, *). Type 'q' to exit."
+>>>>>>> d562fe527f58830c1f9b2f096ca5a043d3cdb0fb
     calculate
 
   elsif response == "2"
