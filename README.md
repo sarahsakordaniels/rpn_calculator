@@ -1,1 +1,0 @@
-# rpm_calculator
