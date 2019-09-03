@@ -27,10 +27,6 @@ Fork and clone the repository to your local machine.
 To use the calculator, run `$ ruby/bin.rb`. 
 
 
-![demo](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/rpngif.gif)
-
-
-
 ## Future Implementations & Improvements
 
 Currently, the application does not contain any tests. Future implementations include testing to ensure proper functionality and output of the application.
