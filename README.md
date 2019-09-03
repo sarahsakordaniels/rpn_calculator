@@ -26,6 +26,7 @@ Fork and clone the repository to your local machine.
 
 To use the calculator, run `$ ruby/bin.rb`. 
 
+![demo](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/demo.gif)
 
 ## Future Implementations & Improvements
 
