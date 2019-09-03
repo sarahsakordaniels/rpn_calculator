@@ -1,4 +1,5 @@
 # Reverse Polish Notation Calculator
+
 This is a command line application that implements a reverse polish notation (RPN) calculator. 
 RPN, also known as postfix notation, is is a mathematical notation in which operators follow their operands.
 
@@ -20,11 +21,16 @@ Ex. The expression written '3 − 4 + 5' is written as '3 4 − 5 +'
 ![sausage](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/sausage.png)
 
 ## Setup & Usage
+
 Fork and clone the repository to your local machine.
 
 To use the calculator, run `$ ruby/bin.rb`. 
 
 
+![demo](https://github.com/sarahsakordaniels/rpn_calculator/blob/media/rpngif.gif)
+
+
 
 ## Future Implementations & Improvements
+
 Currently, the application does not contain any tests. Future implementations include testing to ensure proper functionality and output of the application.
