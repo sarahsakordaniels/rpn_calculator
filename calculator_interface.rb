@@ -9,23 +9,38 @@ class Calculator
     exit
   end
 
+  def self.operate(a, b, operand)
+    case operand
+    when "+"
+      b+a
+    when "-"
+      b-a
+    when "*"
+      b*a
+    when "/"
+      b/a
+    end
+  end
+
   def self.calculate
     @stack = []
+    @operators = []
 
     loop do
-    @input = gets.chomp
-    case @input
-    when "hi"
-        @stack << @input
-        #this input will not always be a number, how do i identify the input type?
-      when "q"
-        break
-      else
-        puts "Invalid input?"
-      end
-     puts @stack
- end
-end
+      @input = gets.chomp
+      case @input
+          when /\d/
+            @stack << @input.to_i
+          when "+", "-", "/", "*"
+            @stack.push(self.operate(@stack.pop, @stack.pop, @input))
+            puts @stack.last
+          when "q"
+            break
+          else
+            puts "Invalid input. Please enter a number or operator."
+          end
+        end
+    end
 
   def self.main_menu
     puts "\nPlease select from the following options:"
@@ -36,7 +51,7 @@ end
     @@response = gets.chomp
 
     if @@response == "1"
-      puts "Please enter an operator or operand:"
+      puts "Please enter a number or operator symbol (+, -, /, *):"
       self.calculate
 
     elsif @@response == "2"
